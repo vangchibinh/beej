@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		<script type="text/javascript"> 
+		function hienthi() { 
+		document.getElementById("user").innerHTML = ""; 
+		document.getElementById("pass").innerHTML = ""; 
+		let isValid = true; 
+		if (document.formdn.hoten.value === "") { 
+		document.getElementById("user").innerHTML="Bạn chưa nhập tên đăng nhập"; 
+		document.formdn.hoten.focus(); 
+		isValid = false; 
+		} 
+		if (document.formdn.matkhau.value === "") { 
+		document.getElementById("pass").innerHTML="Bạn chưa nhập mật khẩu"; 
+		if (isValid) document.formdn.matkhau.focus(); 
+		isValid = false; 
+		} else if (document.formdn.matkhau.value.length < 8) { 
+		document.getElementById("pass").innerHTML = "Mật khẩu phải từ 6 ký tự trở lên"; 
+		if (isValid) document.formdn.matkhau.focus(); 
+		isValid = false; 
+		} 
+		if (isValid) { 
+		alert("Thông tin đã được gửi đi"); 
+		} 
+	} 
+		    </script> 
+		    <style type="text/css"> 
+		        th { 
+		            height: 40px; 
+		        } 
+		        table { 
+		            background-color: #f0f0f0; 
+		            padding: 10px; 
+		        } 
+		        label { 
+		            color: red; 
+		            font-size: 13px; 
+		        } 
+		    </style> 
+		</head> 
+		 
+		<body> 
+		    <form name="formdn"> 
+		        <table align="center"> 
+		            <tr> 
+		                <th colspan="3">THÔNG TIN ĐĂNG KÝ</th> 
+		            </tr> 
+		            <tr> 
+		                <td width="100px">Họ tên</td> 
+		                <td><input type="text" name="hoten" id="hoten"></td> 
+		                <td><label id="user"></label></td> 
+		            </tr> 
+		            <tr> 
+		                <td>Mật khẩu</td> 
+		                <td><input type="password" name="matkhau" id="matkhau"></td> 
+		                <td><label id="pass"></label></td> 
+		            </tr> 
+		            <tr> 
+		                <td></td> 
+		                <td><input type="button" id="nhap" value="Nhập" onclick="hienthi();"> </td> 
+		                <td></td> 
+		            </tr> 
+</table> 
+</form> 
+</body> 
+</html>
+</head>
+<body>
+
+</body>
+</html>
